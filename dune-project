@@ -39,6 +39,7 @@
   dream
   lwt
   melange
+  caqti-driver-sqlite3
   ocaml-lsp-server
   ocamlformat
   reason

@@ -1,2 +1,7 @@
 [@react.component]
-let make = () => <div> {"Hello world" |> React.string} </div>;
+let make = (~articles) => {
+  let count = articles |> List.length;
+  <div>
+    {React.string("Found " ++ Int.to_string(count) ++ " articles")}
+  </div>;
+};

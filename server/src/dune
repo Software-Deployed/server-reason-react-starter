@@ -2,6 +2,7 @@
  (name server)
  (public_name server-reason-react-starter.server)
  (libraries
+  caqti-driver-sqlite3
   dream
   server-reason-react.url_native
   server-reason-react.react
