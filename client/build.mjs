@@ -2,7 +2,7 @@ import Esbuild from "esbuild";
 import Path from "path";
 /* import extractClientComponents from "../../packages/esbuild-plugin/plugin.mjs"; */
 
-import extractClientComponents from "../../../_opam/lib/server-reason-react/esbuild-plugin/plugin.mjs";
+import extractClientComponents from "../../_private/default/.pkg/server-reason-react/source/packages/esbuild-plugin/plugin.mjs";
 
 async function build(entryPoints, { env, output, extract, mockWebpackRequire }) {
 	const outfile = output;
