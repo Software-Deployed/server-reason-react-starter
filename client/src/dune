@@ -19,9 +19,9 @@
   (package server-reason-react)
   (alias_rec melange)
   (:script ../build.mjs)
-  (:entrypoints "app/client/src/App.re.js")
+  (:entrypoints app/client/src/App.re.js)
+  (:document app/client/src/Document.re.js)
   (source_tree ../node_modules)
-  (file ../index.html)
   (file ../package.json)
   (source_tree
    ../_private/default/.pkg/server-reason-react/source/packages/esbuild-plugin))
@@ -30,6 +30,7 @@
    node
    %{script}
    %{entrypoints}
+   %{document}
    --output=client
    --extract=true
    --env=%{env:DEMO_ENV='production'})))
