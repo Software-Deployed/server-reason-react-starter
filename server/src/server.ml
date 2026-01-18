@@ -7,6 +7,9 @@ let () =
   @@ Dream.sql_pool "sqlite3:example.db"
   @@ Dream.router
        [
+         Dream.get "/style.css" (fun req ->
+           let css_path = Filename.concat _doc_root "App.re.css" in
+           Dream.send_file css_path);
          Dream.get "/" (fun req ->
              let%lwt articles = Dream.sql req Database.Article.get_all in
              Dream.stream
