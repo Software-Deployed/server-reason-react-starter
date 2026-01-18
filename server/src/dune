@@ -30,3 +30,6 @@
 
 (copy_files
  (files "../../client/src/*.re"))
+
+(copy_files
+ (files "../../client/src/*.css"))
