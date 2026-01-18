@@ -4,6 +4,8 @@ import Path from "path";
 
 import extractClientComponents from "../../_private/default/.pkg/server-reason-react/source/packages/esbuild-plugin/plugin.mjs";
 
+import tailwindPlugin from "esbuild-plugin-tailwindcss";
+
 async function build(entryPoints, { env, output, extract, mockWebpackRequire }) {
 	const outfile = output;
 	const outdir = Path.dirname(outfile);
@@ -11,14 +13,15 @@ async function build(entryPoints, { env, output, extract, mockWebpackRequire }) 
 
 	const bootstrapOutput = Path.join(Path.dirname(outfile), "bootstrap.js");
 
-	let plugins = [];
+	let plugins = [tailwindPlugin({})];
+
 	if (extract) {
 		plugins.push(
 			extractClientComponents({
 				target: "app",
 				mockWebpackRequire,
 				bootstrapOutput,
-				entrypoints: ["App.re.js"],
+				entrypoints: ["index.html", "App.re.js"],
 			}),
 		);
 	}
