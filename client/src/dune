@@ -19,7 +19,7 @@
   (alias_rec melange)
   (:script ../build.mjs)
   (:entrypoints "app/client/src/App.re.js")
-  (source_tree node_modules)
+  (source_tree ../node_modules)
   (file ../package.json)
   (source_tree lib/server-reason-react/esbuild-plugin))
  (action
