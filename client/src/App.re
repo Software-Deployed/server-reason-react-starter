@@ -1,3 +1,5 @@
+include Style.Client;
+
 [@react.component]
 let make = (~articles) => {
   let count = articles |> List.length;
