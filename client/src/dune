@@ -3,7 +3,8 @@
   (es6 "re.js"))
  (target app)
  (preprocess
-  (pps melange.ppx reason-react-ppx))
+  (pps server-reason-react.browser_ppx -js melange.ppx reason-react-ppx))
+ (runtime_deps index.css)
  (libraries
   common
   melange.belt
