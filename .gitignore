@@ -1,3 +1,4 @@
+.yarn
 dune.lock
 *.annot
 *.cmo
