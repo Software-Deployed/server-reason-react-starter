@@ -1,6 +1,3 @@
-(copy_files
- (files "../../client/src/*.css"))
-
 (executable
  (name server)
  (public_name server-reason-react-starter.server)
