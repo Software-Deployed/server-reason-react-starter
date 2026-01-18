@@ -1,6 +1,6 @@
 [@platform js]
 module Client = {
-  [@mel.module "./index.css"] external _css: unit = "default";
+  [@mel.module "../../client/src/index.css"] external _css: unit = "default";
 };
 
 [@platform native]
