@@ -10,7 +10,7 @@ homepage: "https://github.com/Software-Deployed/server-reason-react-starter"
 bug-reports:
   "https://github.com/Software-Deployed/server-reason-react-starter/issues"
 depends: [
-  "dune" {>= "3.20"}
+  "dune" {>= "3.21"}
   "ocaml" {= "5.4.0"}
   "dream"
   "lwt"
