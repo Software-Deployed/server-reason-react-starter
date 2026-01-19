@@ -14,6 +14,7 @@
   melange.js))
 
 (rule
+ (mode promote)
  (alias app)
  (deps
   (package server-reason-react-starter)
