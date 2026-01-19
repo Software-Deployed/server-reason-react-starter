@@ -1,5 +1,7 @@
 (lang dune 3.21)
 
+(using directory-targets 0.1)
+
 (name server-reason-react-starter)
 
 (generate_opam_files true)

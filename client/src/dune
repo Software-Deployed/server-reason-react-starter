@@ -16,7 +16,7 @@
 (rule
  (alias app)
  (deps
-  (package server-reason-react)
+  (package server-reason-react-starter)
   (alias_rec melange)
   (:script ../build.mjs)
   (:entrypoints app/client/src/App.re.js)
