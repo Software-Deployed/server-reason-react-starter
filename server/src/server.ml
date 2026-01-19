@@ -1,6 +1,6 @@
 let doc_root =
   Sys.getenv_opt "DOC_ROOT"
-  |> Option.value ~default:"./_build/default/client/src/app/client/"
+  |> Option.value ~default:"./_build/default/client/src/"
 
 let () =
   Dream.run ~port:8899 @@ Dream.logger
