@@ -23,8 +23,7 @@
   (:document app/client/src/Document.re.js)
   (source_tree ../node_modules)
   (file ../package.json)
-  (source_tree
-   ../_private/default/.pkg/server-reason-react/source/packages/esbuild-plugin))
+  (source_tree ../../_opam/lib/server-reason-react/esbuild-plugin))
  (action
   (run
    node
