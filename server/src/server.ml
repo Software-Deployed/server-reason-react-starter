@@ -18,9 +18,12 @@ let () =
                    let%lwt () = Dream.write response_stream data in
                    Dream.flush response_stream
                  in
+                 let app =
+                   (App.createElement ~articles ~children:[] () [@JSX])
+                 in
                  let%lwt stream, _abort =
                    ReactDOM.renderToStream
-                     (App.createElement ~articles ~children:[] () [@JSX])
+                     (Document.createElement ~children:[ app ] () [@JSX])
                  in
                  Lwt_stream.iter_s pipe stream));
        ]
