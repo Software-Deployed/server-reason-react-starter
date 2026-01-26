@@ -8,7 +8,7 @@ let make = (~children=?) =>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <title> "Create Reason React Tailwind"->React.string </title>
     </head>
-    <body>
+    <body className="bg-black/80">
       <div id="root">
         {children->Belt.Option.getWithDefault(React.null)}
       </div>

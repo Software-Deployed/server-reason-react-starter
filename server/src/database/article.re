@@ -5,7 +5,7 @@ module type DB = Caqti_lwt.CONNECTION;
 module R = Caqti_request;
 module T = Caqti_type.Std;
 
-let article = T.(t5(int, string, string, float, float));
+let article = T.(t5(int, string, string, string, string));
 
 let add =
   T.t2(T.string, T.string)
