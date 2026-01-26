@@ -25,8 +25,8 @@
 
 (include_subdirs qualified)
 
-(copy_files
+(copy_files#
  (files "../../common/src/*.re"))
 
-(copy_files
+(copy_files#
  (files "../../client/src/*.re"))
