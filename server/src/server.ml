@@ -3,7 +3,7 @@ let doc_root =
   |> Option.value ~default:"./_build/default/client/src/"
 
 let () =
-  Dream.run ~port:8899 @@ Dream.logger @@ Dream.livereload
+  Dream.run ~port:8899 @@ Dream.livereload @@ Dream.logger
   @@ Dream.sql_pool "sqlite3:example.db"
   @@ Dream.router
        [

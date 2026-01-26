@@ -1,7 +1,14 @@
+(rule
+ (alias app)
+ (deps server.exe)
+ (action
+  (bash "date > %{project_root}/../../server/src/.running/built_at.txt")))
+
 (executable
  (name server)
  (public_name server-reason-react-starter.server)
  (libraries
+  lambdasoup
   caqti-driver-sqlite3
   dream
   server-reason-react.url_native

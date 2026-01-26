@@ -12,6 +12,6 @@ module Style = {
 let make = (~articles) => {
   let count = articles |> List.length;
   <div className="border border-gray-400">
-    {React.string("Found " ++ Int.to_string(count) ++ " articles")}
+    {React.string("Found " ++ Int.to_string(count) ++ " blog articles")}
   </div>;
 };
