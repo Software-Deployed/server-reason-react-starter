@@ -1,0 +1,205 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Background for an example OCaml blog with an OCaml camel">
+  <defs>
+    <!-- Background gradients -->
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1020"/>
+      <stop offset="0.55" stop-color="#0a1630"/>
+      <stop offset="1" stop-color="#081226"/>
+    </linearGradient>
+
+    <radialGradient id="glow" cx="25%" cy="20%" r="60%">
+      <stop offset="0" stop-color="#ff6a3d" stop-opacity="0.22"/>
+      <stop offset="0.35" stop-color="#ff6a3d" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#ff6a3d" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="glow2" cx="78%" cy="65%" r="55%">
+      <stop offset="0" stop-color="#ff3d7f" stop-opacity="0.14"/>
+      <stop offset="0.45" stop-color="#ff3d7f" stop-opacity="0.06"/>
+      <stop offset="1" stop-color="#ff3d7f" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Subtle grid pattern -->
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
+      <path d="M24 0V48M0 24H48" fill="none" stroke="#ffffff" stroke-opacity="0.03" stroke-width="1"/>
+    </pattern>
+
+    <!-- Dots pattern -->
+    <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.2" fill="#ffffff" fill-opacity="0.06"/>
+    </pattern>
+
+    <!-- Soft noise-like overlay using feTurbulence -->
+    <filter id="noise" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="n"/>
+      <feColorMatrix in="n" type="matrix"
+        values="1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 0.18 0" result="na"/>
+      <feBlend in="SourceGraphic" in2="na" mode="overlay"/>
+    </filter>
+
+    <!-- Camel gradient -->
+    <linearGradient id="camelFill" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff7a45"/>
+      <stop offset="0.55" stop-color="#ff5a3a"/>
+      <stop offset="1" stop-color="#ff3d7f"/>
+    </linearGradient>
+
+    <!-- Camel shadow -->
+    <filter id="camelShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+
+    <!-- Soft highlight stroke -->
+    <linearGradient id="camelStroke" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.55"/>
+      <stop offset="0.35" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.05"/>
+    </linearGradient>
+
+    <!-- A gentle vignette -->
+    <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
+      <stop offset="0" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="0.75" stop-color="#000000" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.28"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Base -->
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+  <rect width="1600" height="900" fill="url(#glow2)"/>
+
+  <!-- Patterns -->
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <rect width="1600" height="900" fill="url(#dots)" opacity="0.9"/>
+
+  <!-- Decorative diagonal bands -->
+  <g opacity="0.22">
+    <path d="M-200 820 L520 100 L650 100 L-70 820 Z" fill="#ffffff" fill-opacity="0.05"/>
+    <path d="M260 980 L980 260 L1120 260 L400 980 Z" fill="#ff6a3d" fill-opacity="0.06"/>
+    <path d="M820 980 L1540 260 L1680 260 L960 980 Z" fill="#ff3d7f" fill-opacity="0.05"/>
+  </g>
+
+  <!-- Title area hint (subtle) -->
+  <g opacity="0.9">
+    <rect x="120" y="110" width="760" height="120" rx="18" fill="#0b0f1a" fill-opacity="0.35" stroke="#ffffff" stroke-opacity="0.08"/>
+    <path d="M150 170 H850" stroke="#ffffff" stroke-opacity="0.10" stroke-width="2"/>
+    <path d="M150 205 H720" stroke="#ffffff" stroke-opacity="0.08" stroke-width="2"/>
+  </g>
+
+  <!-- Iconic OCaml camel (stylized mark) -->
+  <!-- Positioned bottom-right, large but subtle -->
+  <g transform="translate(980 360) scale(1.05)" filter="url(#camelShadow)" opacity="0.92">
+    <!-- Camel body silhouette (geometric, "iconic" style) -->
+    <path
+      d="M120 330
+         C120 290 150 270 190 270
+         C210 270 230 276 246 286
+         C260 250 292 230 330 230
+         C360 230 386 242 402 262
+         C420 230 456 210 498 210
+         C548 210 590 240 604 286
+         C626 276 652 270 680 270
+         C740 270 790 310 790 370
+         C790 420 760 458 716 474
+         C700 480 682 484 662 486
+         C650 520 620 548 580 560
+         C540 572 496 566 462 544
+         C430 566 390 578 350 574
+         C300 568 258 540 238 496
+         C170 492 120 430 120 330
+         Z"
+      fill="url(#camelFill)"
+      stroke="url(#camelStroke)"
+      stroke-width="3"
+      stroke-linejoin="round"
+    />
+
+    <!-- Neck + head -->
+    <path
+      d="M560 210
+         C560 170 590 140 632 140
+         C666 140 694 160 704 190
+         C720 186 736 188 750 196
+         C770 208 782 230 780 254
+         C778 280 760 300 736 306
+         C712 312 686 304 672 286
+         C660 270 656 250 660 232
+         C646 226 632 224 618 226
+         C592 230 570 246 560 270
+         Z"
+      fill="url(#camelFill)"
+      stroke="url(#camelStroke)"
+      stroke-width="3"
+      stroke-linejoin="round"
+      opacity="0.98"
+    />
+
+    <!-- Ear -->
+    <path
+      d="M650 150
+         C642 132 650 118 666 112
+         C676 126 676 142 668 156
+         Z"
+      fill="#ffd2c4"
+      fill-opacity="0.35"
+      stroke="#ffffff"
+      stroke-opacity="0.18"
+      stroke-width="2"
+      stroke-linejoin="round"
+    />
+
+    <!-- Eye -->
+    <circle cx="720" cy="214" r="5.5" fill="#0b1020" fill-opacity="0.75"/>
+    <circle cx="718" cy="212" r="2.2" fill="#ffffff" fill-opacity="0.55"/>
+
+    <!-- Legs (simple pillars) -->
+    <g opacity="0.95">
+      <path d="M220 470 C220 520 220 560 220 610 C220 640 200 660 172 660 C150 660 136 646 136 626 C136 610 146 596 162 590 C170 586 176 580 178 570 C184 540 190 510 196 480 Z"
+            fill="#ff5a3a" fill-opacity="0.85" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M330 500 C330 540 330 580 330 620 C330 646 312 664 286 664 C262 664 246 648 246 626 C246 610 256 596 272 590 C282 586 288 578 290 566 C296 540 302 514 308 488 Z"
+            fill="#ff5a3a" fill-opacity="0.82" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M520 520 C520 560 520 600 520 640 C520 666 502 684 476 684 C452 684 436 668 436 646 C436 630 446 616 462 610 C472 606 478 598 480 586 C486 560 492 534 498 508 Z"
+            fill="#ff3d7f" fill-opacity="0.70" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M650 500 C650 540 650 580 650 620 C650 646 632 664 606 664 C582 664 566 648 566 626 C566 610 576 596 592 590 C602 586 608 578 610 566 C616 540 622 514 628 488 Z"
+            fill="#ff3d7f" fill-opacity="0.68" stroke="#ffffff" stroke-opacity="0.12" stroke-width="2" stroke-linejoin="round"/>
+    </g>
+
+    <!-- Tail -->
+    <path
+      d="M120 360
+         C92 360 70 380 66 408
+         C62 436 78 460 104 468
+         C120 474 132 486 138 504
+         C146 528 132 552 110 562
+         C140 566 170 548 178 518
+         C186 488 170 456 142 442
+         C126 434 116 420 116 402
+         C116 386 124 372 138 364
+         C132 362 126 360 120 360
+         Z"
+      fill="#ff7a45"
+      fill-opacity="0.75"
+      stroke="#ffffff"
+      stroke-opacity="0.10"
+      stroke-width="2"
+      stroke-linejoin="round"
+    />
+  </g>
+
+  <!-- Vignette + noise -->
+  <rect width="1600" height="900" fill="url(#vignette)"/>
+  <g filter="url(#noise)" opacity="0.55">
+    <rect width="1600" height="900" fill="transparent"/>
+  </g>
+
+  <!-- Footer hint -->
+  <g opacity="0.55">
+    <path d="M0 820 C260 760 520 860 800 820 C1080 780 1320 860 1600 820 L1600 900 L0 900 Z" fill="#000000" fill-opacity="0.22"/>
+    <path d="M0 835 C260 775 520 875 800 835 C1080 795 1320 875 1600 835" fill="none" stroke="#ffffff" stroke-opacity="0.06" stroke-width="2"/>
+  </g>
+</svg>
