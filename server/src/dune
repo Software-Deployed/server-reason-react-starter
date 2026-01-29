@@ -2,7 +2,8 @@
  (alias app)
  (deps server.exe)
  (action
-  (bash "date > %{project_root}/../../server/src/.running/built_at.txt")))
+  (bash
+   "date > %{project_root}/../../server/src/.running/built_at.txt > %{project_root}/../../client/src/.running/built_at.txt")))
 
 (executable
  (name server)

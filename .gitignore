@@ -1,3 +1,4 @@
+client/src/.running/*
 node_modules
 .yarn
 dune.lock
